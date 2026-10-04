@@ -9,21 +9,24 @@ import androidx.compose.ui.unit.dp
 import com.itera.pam.p1.getPlatformName
 
 // Hands-on 1: Expect/Actual — Info Platform
-// getPlatformName() sudah didefinisikan lewat expect/actual (lihat Platform.kt
-// dan Platform.android.kt / Platform.ios.kt / Platform.desktop.kt).
-//
+// getPlatformName() sudah didefinisikan lewat expect/actual
+// (lihat Platform.kt dan Platform.android.kt / Platform.ios.kt / Platform.desktop.kt).
+
 // TODO 1: Panggil getPlatformName() untuk mendapatkan nama platform saat ini
-// TODO 2: Kembalikan pesan sapaan yang menyebutkan nama platform tsb,
+// TODO 2: Kembalikan pesan sapaan yang menyebutkan nama platform tersebut,
 //         contoh: "Halo dari Android 34!" / "Halo dari Desktop JVM 21!"
 
 fun getGreetingMessage(): String {
-    // Kode kamu di sini...
-    return "TODO: lengkapi getGreetingMessage()"
+    val platformName = getPlatformName()
+
+    return "Halo dari $platformName!"
 }
 
 @Composable
 fun Handson1Screen() {
-    Column(modifier = Modifier.padding(16.dp)) {
+    Column(
+        modifier = Modifier.padding(16.dp)
+    ) {
         Text("Hands-on 1: Expect/Actual")
         Text(getGreetingMessage())
     }
