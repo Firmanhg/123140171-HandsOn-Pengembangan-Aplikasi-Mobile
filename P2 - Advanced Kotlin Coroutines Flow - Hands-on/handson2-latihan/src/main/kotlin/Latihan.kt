@@ -9,20 +9,28 @@ import kotlin.random.Random
 fun temperatureSensor(): Flow<Int> = flow {
     repeat(10) {
         delay(500)
+
         val temp = Random.nextInt(20, 40) // Random 20-39°C
+
         emit(temp)
     }
 }
 
 fun main() = runBlocking {
-    // TODO: Gunakan operator flow untuk:
-    // 1. Filter suhu > 30°C saja
-    // 2. Transform (map) menjadi string warning, contoh:
-    //    "⚠️ WARNING: Suhu tinggi terdeteksi: 35°C"
-    // 3. Tampilkan setiap warning dengan collect
 
     temperatureSensor()
-        // .filter { ... }
-        // .map { ... }
-        // .collect { ... }
+        // 1. Hanya mengambil suhu di atas 30°C
+        .filter { temperature ->
+            temperature > 30
+        }
+
+        // 2. Mengubah nilai suhu menjadi pesan warning
+        .map { temperature ->
+            "WARNING: Suhu tinggi terdeteksi: ${temperature}°C"
+        }
+
+        // 3. Menampilkan setiap warning
+        .collect { warning ->
+            println(warning)
+        }
 }
