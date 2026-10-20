@@ -3,14 +3,11 @@
 // List<T>, dengan syarat T harus bisa dibandingkan (Comparable<T>).
 // Ini mirip alasan quickSort butuh constraint T : Comparable<T> di slide.
 
-// TODO 1: Tambahkan bounded type parameter <T : Comparable<T>> pada fungsi
 fun <T : Comparable<T>> findMax(items: List<T>): T {
-    // TODO 3: Periksa apakah list kosong
     if (items.isEmpty()) {
         throw IllegalArgumentException("List tidak boleh kosong")
     }
 
-    // TODO 4: Cari nilai terbesar
     var max = items[0]
 
     for (item in items) {
