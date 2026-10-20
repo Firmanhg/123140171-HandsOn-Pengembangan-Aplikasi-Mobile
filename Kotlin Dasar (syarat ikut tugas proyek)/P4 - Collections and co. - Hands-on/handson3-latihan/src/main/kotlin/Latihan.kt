@@ -1,9 +1,4 @@
 // Hands-on 3: Sequence vs List (Lazy Evaluation)
-// Tugas: Bandingkan List (eager) vs Sequence (lazy) saat memproses data besar
-// dengan operasi filter + map berantai.
-//
-// CATATAN: File ini SENGAJA belum bisa dijalankan dengan benar sampai kamu
-// melengkapi semua TODO — bagian "Kode kamu di sini" masih placeholder.
 
 fun prosesDenganList(data: List<Int>): List<Int> {
     return data
