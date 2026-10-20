@@ -1,6 +1,4 @@
 // Hands-on 2: Grouping & Aggregation
-// Tugas: Dari daftar transaksi, hitung total nominal per kategori.
-// Konsep: groupBy, sumOf, associateBy, Map
 
 data class Transaksi(val id: String, val kategori: String, val nominal: Int)
 
