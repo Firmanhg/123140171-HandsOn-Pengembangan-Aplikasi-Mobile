@@ -1,8 +1,4 @@
 // Hands-on 1: Higher-Order Function
-// Tugas: Lengkapi fungsi `calculate` yang menerima dua angka dan sebuah
-// fungsi `operation` (Int, Int) -> Int, lalu jalankan `operation` terhadap
-// kedua angka tersebut. Panggil `calculate` dengan beberapa lambda berbeda
-// (tambah, kurang, kali) tanpa mengubah signature-nya.
 
 fun calculate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
     // TODO 1: Panggil `operation` dengan a dan b, lalu kembalikan hasilnya
