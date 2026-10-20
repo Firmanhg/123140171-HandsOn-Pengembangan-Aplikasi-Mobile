@@ -16,11 +16,9 @@ fun main() {
     val cupBox = Box("cup")
     println("cupBox.value = ${cupBox.value}")
 
-    // TODO 2: Mengubah Box<Int> menjadi Box<String>
     val stringBox = intBox.map { "Angka: $it" }
     println("stringBox.value = ${stringBox.value}")
 
-    // TODO 3: Mengubah Box<String> menjadi Box<Int>
     val lengthBox = cupBox.map { it.length }
     println("lengthBox.value = ${lengthBox.value}")
 }
