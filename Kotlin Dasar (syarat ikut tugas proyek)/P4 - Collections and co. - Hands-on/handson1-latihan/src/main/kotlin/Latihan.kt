@@ -1,7 +1,4 @@
 // Hands-on 1: Transformasi Collection
-// Tugas: Dari daftar produk, tampilkan NAMA produk yang harganya di atas
-// sebuah threshold, terurut dari yang termurah ke termahal.
-// Konsep: filter, map, sortedBy
 
 data class Product(val nama: String, val harga: Int, val stok: Int)
 
